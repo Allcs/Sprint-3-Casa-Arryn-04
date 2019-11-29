@@ -47,29 +47,29 @@ exec-timeout 5
 login local
 exit
 service password-encryption
-interface gigabitEthernet 0/1
+interface gigabitEthernet 0/0
 no shutdown
-interface gigabitEthernet 0/1.14
+interface gigabitEthernet 0/0.14
 encapsulation dot1q 14
 ip address 192.168.14.1 255.255.255.0
 description VLAN 14
-ip helper-address 192.168.251.5
+ip helper-address 192.168.251.6
 exit
-interface gigabitEthernet 0/1.104
+interface gigabitEthernet 0/0.104
 encapsulation dot1q 104
 ip address 192.168.251.1 255.255.255.0
 description VLAN 104
-ip helper-address 192.168.251.5
+ip helper-address 192.168.251.6
 exit
-interface gigabitEthernet 0/1.13
+interface gigabitEthernet 0/0.13
 encapsulation dot1Q 13
 ip address 192.168.13.1 255.255.255.0
-ip helper-address 192.168.252.5 
+ip helper-address 192.168.252.6
 description VLAN13
 exit
-interface gigabitEthernet 0/1.103
+interface gigabitEthernet 0/0.103
 encapsulation dot1Q 103
 ip address 192.168.252.1 255.255.255.0
-ip helper-address 192.168.252.5 
+ip helper-address 192.168.252.6
 description VLAN103
 do wr 
